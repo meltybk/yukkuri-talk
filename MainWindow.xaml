@@ -1,0 +1,26 @@
+﻿<Window x:Class="YukkuriTalk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YukkuriTalk"
+        mc:Ignorable="d"
+        Title="Yukkuri Talk" Height="380" Width="460" MinHeight="380" MinWidth="445"
+        Background="LightGray">
+    <Grid>
+        <TextBox Name="MainText" AcceptsReturn="True" Margin="10,10,11,182" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" />
+        <TextBlock Text="速度" FontWeight="Bold" TextAlignment="Center" Padding="5" Background="White" Margin="10,0,0,133" HorizontalAlignment="Left" Width="39" Height="29" VerticalAlignment="Bottom" />
+        <TextBlock Name="PitchValue" FontWeight="Bold" Text="100" TextAlignment="Center" Padding="5" Background="White" Width="41" Height="29" Margin="54,0,0,133" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+        <Slider ValueChanged="Pitch_ValueChanged" Name="PitchSlider" Minimum="50" Maximum="300" Value="100" IsSnapToTickEnabled="True" TickFrequency="10" SmallChange="1" LargeChange="10" Background="White" TickPlacement="BottomRight" Margin="100,0,10,133" Height="29" VerticalAlignment="Bottom" />
+        <Button Click="Play_Button_Click" Height="30" Width="30" Background="LightGray" Margin="14,0,0,76" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Image Source="play.png" />
+        </Button>
+        <Button Click="Save_Button_Click" Width="30" Height="30" Background="LightGray" Margin="60,0,0,76" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+            <Image Source="content-save-outline.png" />
+        </Button>
+        <Button Click="Folder_Button_Click" Width="30" Height="30" Background="LightGray" Margin="106,0,0,76" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+            <Image Source="folder-outline.png" />
+        </Button>
+        <TextBox Name="LogText" IsReadOnly="True" Margin="10,0,11,10" Height="47" VerticalAlignment="Bottom" />
+    </Grid>
+</Window>
